@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace UniFipMoc.Models
 {
-    public class contexto : DbContext
+    public class Contexto : DbContext
     {
         public DbSet<Academico> Academicos { get; set; }
     }

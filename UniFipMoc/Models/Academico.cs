@@ -10,7 +10,7 @@ namespace UniFipMoc.Models
     {
         [Key]
         public int Id { get; set; }
-        public int CPF { get; set; }
+        public string CPF { get; set; }
         public string Nome { get; set; }
         public DateTime Data_nascimento { get; set; }
         public string Telefone { get; set; }

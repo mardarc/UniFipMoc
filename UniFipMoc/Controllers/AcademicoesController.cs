@@ -12,7 +12,7 @@ namespace UniFipMoc.Controllers
 {
     public class AcademicoesController : Controller
     {
-        private contexto db = new contexto();
+        private Contexto db = new Contexto();
 
         // GET: Academicoes
         public ActionResult Index()
