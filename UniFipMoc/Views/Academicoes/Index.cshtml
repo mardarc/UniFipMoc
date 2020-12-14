@@ -1,0 +1,65 @@
+﻿@model IEnumerable<UniFipMoc.Models.Academico>
+
+@{
+    ViewBag.Title = "Listagem dos Acadêmicos";
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <h2>Acadêmicos</h2>
+    </div>
+    <div class="col-md-4 text-right">
+        <div style="margin-top: 3rem">
+            @Html.ActionLink("Adicionar novo", "Create")
+        </div>
+    </div>
+</div>
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CPF)
+        </th>
+        <th>
+            Nome Completo
+        </th>
+        <th>
+            Data de nascimento
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CPF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_nascimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Ver", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
